@@ -15,7 +15,7 @@ const books = [hp, invMan];
 
 const submitBtn = document.getElementById("form-submit");
 const newBookBtn = document.getElementById("new-book-button");
-const bookForm = document.querySelector(".new-book-table");
+const bookForm = document.querySelector(".book-form");
 
 // Toggle to show / hide new book form
 newBookBtn.addEventListener("click", function() {
@@ -90,11 +90,14 @@ function render(books) {
     // Add a delete button for each book
     const deleteButton = document.createElement("button");
     deleteButton.addEventListener("click", function() {
-      booksContainer.removeChild(node);
-      const bookToDelete = books.indexOf(book);
-      if (bookToDelete > -1) {
-        books.splice(bookToDelete, 1);
-      }
+
+    //	
+    booksContainer.removeChild(bookRow);
+    const bookToDelete = books.indexOf(book);
+    if (bookToDelete > -1) {
+    	books.splice(bookToDelete, 1);
+    }
+
     })
 
     deleteButton.innerHTML = "Delete";
@@ -128,8 +131,6 @@ function render(books) {
     // Set a different background to each article to improve clarity
     // if (books.indexOf(book) % 2 == 0) { node.style.background = "rgb(205,185,220)"; }
     
-
-
     // booksContainer.appendChild(node);
 
   })
