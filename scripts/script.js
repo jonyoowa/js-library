@@ -15,18 +15,29 @@ const books = [hp, invMan];
 
 const submitBtn = document.getElementById("form-submit");
 const newBookBtn = document.getElementById("new-book-button");
+
+//
 const bookForm = document.querySelector(".book-form");
+//
 
 // Toggle to show / hide new book form
 newBookBtn.addEventListener("click", function() {
-  bookForm.classList.toggle("visible");
-})
+
+/*  bookForm.classList.toggle("visible");*/
+
+  if (bookForm.style.display == "none") {
+    bookForm.style.display = "block";
+  } else {
+    bookForm.style.display = "none";
+  }
+
+});
 
 // Submit form button listener
 submitBtn.addEventListener("click", function() {
   addBook(books);
   render(books);
-})
+});
 
 function render(books) {
   const mainContainer = document.querySelector(".main-container");

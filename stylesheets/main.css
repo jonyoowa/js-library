@@ -40,15 +40,11 @@ button {
   width: 20%;
   padding: 10px 10px 0 10px;
   transition: height 0.5s;
-  visibility: hidden;
+
+  display: none;
+
   margin: 0 auto;
   text-align: left;
-}
-
-.visible {
-  visibility: visible;
-  border: 1px solid black;
-  height: 260px;
 }
 
 .book-form input {
