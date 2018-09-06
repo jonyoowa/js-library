@@ -1,12 +1,23 @@
-class Book {
-  constructor(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-  }
+// class Book {
+//   constructor(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//   }
 
-  toggleRead() { this.read == "true" ? this.read = "false" : this.read = "true" }
+//   toggleRead() { this.read == "true" ? this.read = "false" : this.read = "true" }
+// }
+
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read; 
+
+  Book.prototype.toggleRead = function() { 
+    this.read == "true" ? this.read = "false" : this.read = "true";
+  }
 }
 
 const hp = new Book("Harry Potter", "Rowling", 150, "false");
